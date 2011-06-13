@@ -13,25 +13,17 @@
 @synthesize isReadOnlyModeOn;
 
 - (id)init {
-    // XXX: No need to call super since you call an overrided constuctor that calls super
-    self = [super init];
-    if (self) {
-        [self init:NO];
-    }
-    return self;
+
+    return [self init:NO];
 }
 
 //  Initializer with read-only flag
 - (id)init:(BOOL)isReadOnly {
-    // XXX: No need to call super since you call an overrided constuctor that calls super
-    self = [super init];
-    if (self) {
-        [self initWithFrame:CGRectMake(0, 0, 320, 480) ReadOnlyState:isReadOnly];
-    }
-    return self;
+
+    return [self initWithFrame:CGRectMake(0, 0, 320, 480) readOnlyState:isReadOnly];
 }
 
-- (id)initWithFrame:(CGRect)frame ReadOnlyState:(BOOL)isReadOnly {
+- (id)initWithFrame:(CGRect)frame readOnlyState:(BOOL)isReadOnly {
     
     self = [super initWithFrame:frame];
     if (self) {

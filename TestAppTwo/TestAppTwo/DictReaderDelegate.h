@@ -10,9 +10,9 @@
 #import "ReaderTextViewController.h"
 
 @interface DictReaderDelegate : NSObject <UIApplicationDelegate> {
-    // XXX: IBOutlet and IBAction should not be declared here
-    IBOutlet UITabBarController *theTabBarController;
-    IBOutlet UIWindow * window;
+
+    UITabBarController *theTabBarController;
+    UIWindow * window;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

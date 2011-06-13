@@ -21,8 +21,8 @@
     int gutenbergRating;
 
 }
-// XXX: String should be copy not retain
-@property (nonatomic, retain) NSString * theTerm;
+
+@property (nonatomic, copy) NSString * theTerm;
 @property (nonatomic, retain) NSDictionary * definitionsAndSampleSentences;
 @property (nonatomic, assign) int gutenbergRating;
 

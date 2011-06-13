@@ -16,16 +16,14 @@
 
 
 - (id)init {
-    // XXX: No need to call super since you call overrided constuctor that calls super
-    self = [super init];
-    if (self) {
-        [self initWithTerm:nil];
-    }
-    return self;
+
+    return [self initWithTerm:nil];
+    
 }
 
 //  custom intializer to allow initialization with a search term.
 - (id)initWithTerm:(NSString*)term {
+    
     self = [super init];
     if (self) {
         data = [[DefinitionsViewModel alloc] initWithTerm:term];
@@ -85,10 +83,9 @@
 //  Display header in table to show gutenberg rank
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
-    // XXX: Memory leak with headerLabel
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 30)] autorelease];
     CGRect labelFrame = CGRectMake(0, 0, headerView.frame.size.width, headerView.frame.size.height);
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:labelFrame];
+    UILabel *headerLabel = [[[UILabel alloc] initWithFrame:labelFrame] autorelease];
     headerLabel.backgroundColor = [UIColor redColor];
     headerLabel.textColor = [UIColor whiteColor];
     headerLabel.text = [NSString stringWithFormat:@"Gutenberg Rank: %d", self.data.gutenbergRating];
@@ -132,6 +129,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
     // XXX: Why are you not using reusing cells?!?!? This is a major performance hit!
+    // YYY: Had issue with cell redisplaying its subviews from higher up in the list (currentCellTextView) which resulted in repeat info
+    // YYY: being displayed.  May have to subclass UITableViewCell to do this effectively.  Just implemented this way to demonstrate 
+    // YYY: functionality.
     
     //  Temporary workaround due to unsolved update issue with currentCellTextView's text.
     UITableViewCell * cell = [[[UITableViewCell alloc] init] autorelease];
@@ -176,12 +176,11 @@
 
 //  Allow dictionary use of dictionary terms.
 - (void)onLookupSelected:(NSString *) textSelection {
-    // XXX: Should be released here and not autoreleased
     
     //  If word is looked up, push a new view controller onto the nav controller to display definition.
-    DefinitionsViewController * next = [[[DefinitionsViewController alloc] initWithTerm:textSelection] autorelease];
+    DefinitionsViewController * next = [[DefinitionsViewController alloc] initWithTerm:textSelection];
     [self.navigationController pushViewController:next animated:YES];
-    
+    [next release];
 }
 
 

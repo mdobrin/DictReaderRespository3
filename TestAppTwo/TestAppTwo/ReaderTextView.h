@@ -22,6 +22,6 @@
 
 - (id)init:(BOOL)isReadOnly;
 // XXX: named parameters should not start with a capital letter
-- (id)initWithFrame:(CGRect)frame ReadOnlyState:(BOOL)isReadOnly;
+- (id)initWithFrame:(CGRect)frame readOnlyState:(BOOL)isReadOnly;
 
 @end

@@ -7,7 +7,27 @@
 //
 
 #import "ReaderTextViewController.h"
-#import "ReaderSingleton.h"
+#import "TextManager.h"
+
+
+@interface ReaderTextViewController (hidden)
+
+- (void) doneButtonWasPressed;;
+
+@end
+
+
+@implementation ReaderTextViewController (hidden)
+
+//  Event handler for done button press
+- (void) doneButtonWasPressed {
+    
+    [[self navigationItem] setRightBarButtonItem:nil];
+    [self.textViewer resignFirstResponder];
+}
+
+@end
+
 
 @implementation ReaderTextViewController
 @synthesize textViewer;
@@ -15,17 +35,13 @@
 
 //  Initialize view controller.  By default, read only is set to NO
 - (id) init { 
-    // XXX: No need to call super since you call an overrided constuctor that calls super
-    self = [super init];
-    if (self) {
-        [self initWithReadOnlyOn:NO];
-    }
-    return self;
-    
+
+    return [self initWithReadOnlyOn:NO];    
 }
 
 //  Custom initialize with read only turned on or off.
 - (id) initWithReadOnlyOn:(BOOL)isReadOnly { 
+    
     self = [super init];
     if (self) {
         shouldViewBeReadOnly = isReadOnly;
@@ -37,22 +53,15 @@
 //  Upon disappearing, pass currently displayed text to the reader singleton 
 //  to allow text sharing between views on the tab bar.
 - (void)viewWillDisappear:(BOOL)animated {
-    
-    // XXX: You do not need to pull out the instance. i.e. [ReaderSingleton sharedAppInstance].currentText = self.textViewer.text
-    ReaderSingleton *sharedAppInstance;
-    sharedAppInstance = [ReaderSingleton sharedAppInstance];
-    sharedAppInstance.currentText = self.textViewer.text;
+
+    [TextManager sharedInstance].currentText = self.textViewer.text;
 }
 
 
 //  Upon appearing, receive currently displayed text from the reader singleton
 - (void) viewWillAppear:(BOOL)animated {
     
-    // XXX: See above
-    ReaderSingleton *sharedAppInstance;
-    sharedAppInstance = [ReaderSingleton sharedAppInstance];
-    self.textViewer.text = sharedAppInstance.currentText;
-    
+    self.textViewer.text = [TextManager sharedInstance].currentText;
 }
 
 
@@ -68,11 +77,13 @@
     [UIMenuController sharedMenuController].menuItems = [NSArray arrayWithObject:testMenuItem];
     [testMenuItem release];
     
-    // XXX: Memory leak. Either autorelease the ReaderTextView, or set to a variable that you can release, or take the self. off textViewer
     // XXX: Also, you should be overloading viewDidUnload and release this there as well
+    // YYY: Isn't viewDidUnload the counterpart for viewDidLoad?  loadView is the first time this memory is allocated
+    // YYY: so wouldn't dealloc be the time when these are released?
     
     //  Assign delegates for both UITextViewDelegate and ReaderTextViewDelegate
-    self.textViewer = [[ReaderTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) ReadOnlyState:shouldViewBeReadOnly];
+    ReaderTextView * temp = [[[ReaderTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) readOnlyState:shouldViewBeReadOnly] autorelease];
+    self.textViewer = temp;
     self.textViewer.delegate = self;
     self.textViewer.readerDelegate = self;
     self.view = self.textViewer;    
@@ -80,6 +91,7 @@
 }
 
 - (void)dealloc {
+    
     [textViewer release];
     [super dealloc];
 }
@@ -103,27 +115,20 @@
 //  If word is looked up, push a new view controller onto the nav controller to display definitions and sample sentences.
 - (void)onLookupSelected:(NSString *) textSelection {
 
-    // XXX: Should release the controller right away since there is no need to autorelease
-    DefinitionsViewController * next = [[[DefinitionsViewController alloc] initWithTerm:textSelection] autorelease];
+    DefinitionsViewController * next = [[DefinitionsViewController alloc] initWithTerm:textSelection];
     [self.navigationController pushViewController:next animated:YES];
+    [next release];
 }
 
 
 //  If keyboard editing begins, display Done button in upper-right corner to allow user to hide keyboard.
 - (void)textViewDidBeginEditing:(UITextView *)textView  {       
     
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed)];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonWasPressed)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
     [doneButton release];
 }
 
-// XXX: This method is only called privately so it should be declared private
-//  Event handler for done button press
-- (void) doneButtonPressed {
-
-    [[self navigationItem] setRightBarButtonItem:nil];
-    [self.textViewer resignFirstResponder];
-}
 
 
 

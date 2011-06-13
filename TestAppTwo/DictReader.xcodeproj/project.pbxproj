@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2704D8A413A44D3F0095FB1A /* dictionaryTerms.db in Resources */ = {isa = PBXBuildFile; fileRef = 2704D8A313A44D3F0095FB1A /* dictionaryTerms.db */; };
-		27148D5913A3E17900E018DC /* ReaderSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 27148D5813A3E17900E018DC /* ReaderSingleton.m */; };
+		27148D5913A3E17900E018DC /* TextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27148D5813A3E17900E018DC /* TextManager.m */; };
 		27A393C9139FA6DA00766E12 /* DefinitionsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A393C8139FA6DA00766E12 /* DefinitionsViewModel.m */; };
 		27C8EF3A1397D55C00789460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF391397D55C00789460 /* UIKit.framework */; };
 		27C8EF3C1397D55C00789460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF3B1397D55C00789460 /* Foundation.framework */; };
@@ -44,8 +44,8 @@
 
 /* Begin PBXFileReference section */
 		2704D8A313A44D3F0095FB1A /* dictionaryTerms.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = dictionaryTerms.db; sourceTree = "<group>"; };
-		27148D5713A3E17900E018DC /* ReaderSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderSingleton.h; sourceTree = "<group>"; };
-		27148D5813A3E17900E018DC /* ReaderSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderSingleton.m; sourceTree = "<group>"; };
+		27148D5713A3E17900E018DC /* TextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TextManager.h; sourceTree = "<group>"; };
+		27148D5813A3E17900E018DC /* TextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextManager.m; sourceTree = "<group>"; };
 		27A393C7139FA6DA00766E12 /* DefinitionsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefinitionsViewModel.h; sourceTree = "<group>"; };
 		27A393C8139FA6DA00766E12 /* DefinitionsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefinitionsViewModel.m; sourceTree = "<group>"; };
 		27C8EF351397D55C00789460 /* DictReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +104,8 @@
 		27148D5613A3E15900E018DC /* ReaderSingleton */ = {
 			isa = PBXGroup;
 			children = (
-				27148D5713A3E17900E018DC /* ReaderSingleton.h */,
-				27148D5813A3E17900E018DC /* ReaderSingleton.m */,
+				27148D5713A3E17900E018DC /* TextManager.h */,
+				27148D5813A3E17900E018DC /* TextManager.m */,
 			);
 			name = ReaderSingleton;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 				27EE5EFA139CE7650029DFA0 /* ReaderTextViewController.m in Sources */,
 				27EE5EFF139CE7E20029DFA0 /* DefinitionsViewController.m in Sources */,
 				27A393C9139FA6DA00766E12 /* DefinitionsViewModel.m in Sources */,
-				27148D5913A3E17900E018DC /* ReaderSingleton.m in Sources */,
+				27148D5913A3E17900E018DC /* TextManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

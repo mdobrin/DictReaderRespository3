@@ -15,12 +15,8 @@
 
 
 - (id)init {
-    // XXX: No need to call super since you call an overrided constuctor that calls super
-    self = [super init];
-    if (self) {
-        [self initWithTerm:nil];
-    }
-    return self;
+
+    return [self initWithTerm:nil];
 }
 
 //  Allow initialization with term
@@ -28,11 +24,10 @@
     
     self = [super init];
     if (self) {
-        // XXX: [string count] > 0 is a better "is null or empty" check
-        if (term != nil) {
+
+        [self initializeDatabase];
+        if ([term length] > 0) {
             theTerm = [[NSString alloc] initWithString:term];
-            // XXX: So if term is nil, you dont init a database?
-            [self initializeDatabase];
             [self getTermInformation];
         }
     }
@@ -117,7 +112,6 @@
                     // get definition
                     [currentDefinitionsArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatementThree, 0)]];
                     
-                    // XXX: Memory leak with currentSubSampleSentencesArray
                     // get definition, then prepare to get all associated sample sentences with that definition
                     //int definitionID = sqlite3_column_int(selectStatementThree, 1);
                     NSMutableArray * currentSubSampleSentencesArray = [[NSMutableArray alloc] initWithCapacity:0];
@@ -141,6 +135,7 @@
                         [currentSubSampleSentencesArray addObject:@""];
                     //}
                     [currentSampleSentencesArray addObject:currentSubSampleSentencesArray];
+                    [currentSubSampleSentencesArray release];
                     
                 }
             } else {
