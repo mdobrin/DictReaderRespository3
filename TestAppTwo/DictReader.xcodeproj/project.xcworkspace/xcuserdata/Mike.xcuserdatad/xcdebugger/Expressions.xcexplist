@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesStackState
+   version = "1.0">
+   <StackStates>
+      <StackState
+         stackFrameDescription = "-[DefinitionsViewController tableView:heightForRowAtIndexPath:]:DefinitionsViewController.m">
+         <expressions>
+            <expression
+               value = "indexPath.row">
+            </expression>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[ReaderTextView onLookup:]:ReaderTextView.m">
+         <expressions>
+            <expression
+               value = "self.text">
+            </expression>
+         </expressions>
+      </StackState>
+   </StackStates>
+</VariablesStackState>

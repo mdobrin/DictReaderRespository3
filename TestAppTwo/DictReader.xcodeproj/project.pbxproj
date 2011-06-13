@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2704D8A413A44D3F0095FB1A /* dictionaryTerms.db in Resources */ = {isa = PBXBuildFile; fileRef = 2704D8A313A44D3F0095FB1A /* dictionaryTerms.db */; };
+		27148D5913A3E17900E018DC /* ReaderSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 27148D5813A3E17900E018DC /* ReaderSingleton.m */; };
+		27A393C9139FA6DA00766E12 /* DefinitionsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A393C8139FA6DA00766E12 /* DefinitionsViewModel.m */; };
+		27C8EF3A1397D55C00789460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF391397D55C00789460 /* UIKit.framework */; };
+		27C8EF3C1397D55C00789460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF3B1397D55C00789460 /* Foundation.framework */; };
+		27C8EF3E1397D55C00789460 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF3D1397D55C00789460 /* CoreGraphics.framework */; };
+		27C8EF471397D55C00789460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8EF461397D55C00789460 /* main.m */; };
+		27C8EF4A1397D55C00789460 /* DictReaderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8EF491397D55C00789460 /* DictReaderDelegate.m */; };
+		27C8EF541397D55D00789460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF391397D55C00789460 /* UIKit.framework */; };
+		27C8EF551397D55D00789460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF3B1397D55C00789460 /* Foundation.framework */; };
+		27C8EF561397D55D00789460 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8EF3D1397D55C00789460 /* CoreGraphics.framework */; };
+		27D2599B139B390A00427A27 /* ReaderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D2599A139B390A00427A27 /* ReaderTextView.m */; };
+		27E34C1F13A536CB00810F73 /* file.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E34C1B13A536CB00810F73 /* file.png */; };
+		27E34C2013A536CB00810F73 /* glasses.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E34C1C13A536CB00810F73 /* glasses.png */; };
+		27E34C2113A536CB00810F73 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E34C1D13A536CB00810F73 /* info.png */; };
+		27E34C2213A536CB00810F73 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E34C1E13A536CB00810F73 /* pencil.png */; };
+		27E34C2613A53C2700810F73 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E34C2513A53C2700810F73 /* Icon.png */; };
+		27E34C3C13A54E5100810F73 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E34C3B13A54E5100810F73 /* InfoViewController.xib */; };
+		27E9CA6413A46C3B000968EB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E9CA6313A46C3B000968EB /* libsqlite3.dylib */; };
+		27EE5EFA139CE7650029DFA0 /* ReaderTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EE5EF9139CE7650029DFA0 /* ReaderTextViewController.m */; };
+		27EE5EFF139CE7E20029DFA0 /* DefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EE5EFD139CE7E20029DFA0 /* DefinitionsViewController.m */; };
+		27EE5F24139D16200029DFA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27EE5F1D139D16200029DFA0 /* InfoPlist.strings */; };
+		27EE5F25139D16200029DFA0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27EE5F1F139D16200029DFA0 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27C8EF571397D55D00789460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27C8EF2C1397D55C00789460 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27C8EF341397D55C00789460;
+			remoteInfo = TestAppTwo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2704D8A313A44D3F0095FB1A /* dictionaryTerms.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = dictionaryTerms.db; sourceTree = "<group>"; };
+		27148D5713A3E17900E018DC /* ReaderSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderSingleton.h; sourceTree = "<group>"; };
+		27148D5813A3E17900E018DC /* ReaderSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderSingleton.m; sourceTree = "<group>"; };
+		27A393C7139FA6DA00766E12 /* DefinitionsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefinitionsViewModel.h; sourceTree = "<group>"; };
+		27A393C8139FA6DA00766E12 /* DefinitionsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefinitionsViewModel.m; sourceTree = "<group>"; };
+		27C8EF351397D55C00789460 /* DictReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C8EF391397D55C00789460 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27C8EF3B1397D55C00789460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27C8EF3D1397D55C00789460 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27C8EF411397D55C00789460 /* DictReader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DictReader-Info.plist"; sourceTree = "<group>"; };
+		27C8EF451397D55C00789460 /* DictReader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DictReader-Prefix.pch"; sourceTree = "<group>"; };
+		27C8EF461397D55C00789460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27C8EF481397D55C00789460 /* DictReaderDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictReaderDelegate.h; sourceTree = "<group>"; };
+		27C8EF491397D55C00789460 /* DictReaderDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictReaderDelegate.m; sourceTree = "<group>"; };
+		27C8EF531397D55D00789460 /* DictReaderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictReaderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D25999139B390A00427A27 /* ReaderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderTextView.h; sourceTree = "<group>"; };
+		27D2599A139B390A00427A27 /* ReaderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderTextView.m; sourceTree = "<group>"; };
+		27D2599C139B393800427A27 /* ReaderTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderTextViewDelegate.h; sourceTree = "<group>"; };
+		27E34C1B13A536CB00810F73 /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
+		27E34C1C13A536CB00810F73 /* glasses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glasses.png; sourceTree = "<group>"; };
+		27E34C1D13A536CB00810F73 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		27E34C1E13A536CB00810F73 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		27E34C2513A53C2700810F73 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		27E34C3B13A54E5100810F73 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoViewController.xib; path = TestAppTwo/Resources/InfoViewController.xib; sourceTree = "<group>"; };
+		27E9CA6313A46C3B000968EB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		27EE5EF8139CE7650029DFA0 /* ReaderTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderTextViewController.h; sourceTree = "<group>"; };
+		27EE5EF9139CE7650029DFA0 /* ReaderTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderTextViewController.m; sourceTree = "<group>"; };
+		27EE5EFC139CE7E20029DFA0 /* DefinitionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefinitionsViewController.h; sourceTree = "<group>"; };
+		27EE5EFD139CE7E20029DFA0 /* DefinitionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefinitionsViewController.m; sourceTree = "<group>"; };
+		27EE5F1E139D16200029DFA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		27EE5F20139D16200029DFA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27C8EF321397D55C00789460 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C8EF3A1397D55C00789460 /* UIKit.framework in Frameworks */,
+				27C8EF3C1397D55C00789460 /* Foundation.framework in Frameworks */,
+				27C8EF3E1397D55C00789460 /* CoreGraphics.framework in Frameworks */,
+				27E9CA6413A46C3B000968EB /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C8EF4F1397D55D00789460 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C8EF541397D55D00789460 /* UIKit.framework in Frameworks */,
+				27C8EF551397D55D00789460 /* Foundation.framework in Frameworks */,
+				27C8EF561397D55D00789460 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27148D5613A3E15900E018DC /* ReaderSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				27148D5713A3E17900E018DC /* ReaderSingleton.h */,
+				27148D5813A3E17900E018DC /* ReaderSingleton.m */,
+			);
+			name = ReaderSingleton;
+			sourceTree = "<group>";
+		};
+		27C5D65C13A4609F0070EB74 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				27E9CA6313A46C3B000968EB /* libsqlite3.dylib */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		27C8EF2A1397D55C00789460 = {
+			isa = PBXGroup;
+			children = (
+				27D259AD139B504300427A27 /* Resources */,
+				27C8EF3F1397D55C00789460 /* DictReader */,
+				27C8EF381397D55C00789460 /* Frameworks */,
+				27C8EF361397D55C00789460 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27C8EF361397D55C00789460 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27C8EF351397D55C00789460 /* DictReader.app */,
+				27C8EF531397D55D00789460 /* DictReaderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27C8EF381397D55C00789460 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27C5D65C13A4609F0070EB74 /* include */,
+				27C8EF391397D55C00789460 /* UIKit.framework */,
+				27C8EF3B1397D55C00789460 /* Foundation.framework */,
+				27C8EF3D1397D55C00789460 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27C8EF3F1397D55C00789460 /* DictReader */ = {
+			isa = PBXGroup;
+			children = (
+				27148D5613A3E15900E018DC /* ReaderSingleton */,
+				27EE5EB8139B67390029DFA0 /* ReaderTextView */,
+				27EE5EFB139CE7BC0029DFA0 /* DefinitionsView */,
+				27C8EF401397D55C00789460 /* Supporting Files */,
+			);
+			name = DictReader;
+			path = TestAppTwo;
+			sourceTree = "<group>";
+		};
+		27C8EF401397D55C00789460 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27C8EF481397D55C00789460 /* DictReaderDelegate.h */,
+				27C8EF491397D55C00789460 /* DictReaderDelegate.m */,
+				27C8EF411397D55C00789460 /* DictReader-Info.plist */,
+				27C8EF451397D55C00789460 /* DictReader-Prefix.pch */,
+				27C8EF461397D55C00789460 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27D259AD139B504300427A27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27E34C3B13A54E5100810F73 /* InfoViewController.xib */,
+				27E34C1A13A536CB00810F73 /* Icons */,
+				2704D8A313A44D3F0095FB1A /* dictionaryTerms.db */,
+				27EE5F1C139D16200029DFA0 /* en.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		27E34C1A13A536CB00810F73 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				27E34C2513A53C2700810F73 /* Icon.png */,
+				27E34C1B13A536CB00810F73 /* file.png */,
+				27E34C1C13A536CB00810F73 /* glasses.png */,
+				27E34C1D13A536CB00810F73 /* info.png */,
+				27E34C1E13A536CB00810F73 /* pencil.png */,
+			);
+			name = Icons;
+			path = TestAppTwo/Resources/Icons;
+			sourceTree = "<group>";
+		};
+		27EE5EB8139B67390029DFA0 /* ReaderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				27EE5EF8139CE7650029DFA0 /* ReaderTextViewController.h */,
+				27EE5EF9139CE7650029DFA0 /* ReaderTextViewController.m */,
+				27D25999139B390A00427A27 /* ReaderTextView.h */,
+				27D2599A139B390A00427A27 /* ReaderTextView.m */,
+				27D2599C139B393800427A27 /* ReaderTextViewDelegate.h */,
+			);
+			name = ReaderTextView;
+			sourceTree = "<group>";
+		};
+		27EE5EFB139CE7BC0029DFA0 /* DefinitionsView */ = {
+			isa = PBXGroup;
+			children = (
+				27EE5EFC139CE7E20029DFA0 /* DefinitionsViewController.h */,
+				27EE5EFD139CE7E20029DFA0 /* DefinitionsViewController.m */,
+				27A393C7139FA6DA00766E12 /* DefinitionsViewModel.h */,
+				27A393C8139FA6DA00766E12 /* DefinitionsViewModel.m */,
+			);
+			name = DefinitionsView;
+			sourceTree = "<group>";
+		};
+		27EE5F1C139D16200029DFA0 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				27EE5F1D139D16200029DFA0 /* InfoPlist.strings */,
+				27EE5F1F139D16200029DFA0 /* MainWindow.xib */,
+			);
+			name = en.lproj;
+			path = TestAppTwo/Resources/en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27C8EF341397D55C00789460 /* DictReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C8EF661397D55D00789460 /* Build configuration list for PBXNativeTarget "DictReader" */;
+			buildPhases = (
+				27C8EF311397D55C00789460 /* Sources */,
+				27C8EF321397D55C00789460 /* Frameworks */,
+				27C8EF331397D55C00789460 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DictReader;
+			productName = TestAppTwo;
+			productReference = 27C8EF351397D55C00789460 /* DictReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27C8EF521397D55D00789460 /* DictReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C8EF691397D55D00789460 /* Build configuration list for PBXNativeTarget "DictReaderTests" */;
+			buildPhases = (
+				27C8EF4E1397D55D00789460 /* Sources */,
+				27C8EF4F1397D55D00789460 /* Frameworks */,
+				27C8EF501397D55D00789460 /* Resources */,
+				27C8EF511397D55D00789460 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27C8EF581397D55D00789460 /* PBXTargetDependency */,
+			);
+			name = DictReaderTests;
+			productName = TestAppTwoTests;
+			productReference = 27C8EF531397D55D00789460 /* DictReaderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27C8EF2C1397D55C00789460 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 27C8EF2F1397D55C00789460 /* Build configuration list for PBXProject "DictReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27C8EF2A1397D55C00789460;
+			productRefGroup = 27C8EF361397D55C00789460 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27C8EF341397D55C00789460 /* DictReader */,
+				27C8EF521397D55D00789460 /* DictReaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27C8EF331397D55C00789460 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27EE5F24139D16200029DFA0 /* InfoPlist.strings in Resources */,
+				27EE5F25139D16200029DFA0 /* MainWindow.xib in Resources */,
+				2704D8A413A44D3F0095FB1A /* dictionaryTerms.db in Resources */,
+				27E34C1F13A536CB00810F73 /* file.png in Resources */,
+				27E34C2013A536CB00810F73 /* glasses.png in Resources */,
+				27E34C2113A536CB00810F73 /* info.png in Resources */,
+				27E34C2213A536CB00810F73 /* pencil.png in Resources */,
+				27E34C2613A53C2700810F73 /* Icon.png in Resources */,
+				27E34C3C13A54E5100810F73 /* InfoViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C8EF501397D55D00789460 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27C8EF511397D55D00789460 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27C8EF311397D55C00789460 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C8EF471397D55C00789460 /* main.m in Sources */,
+				27C8EF4A1397D55C00789460 /* DictReaderDelegate.m in Sources */,
+				27D2599B139B390A00427A27 /* ReaderTextView.m in Sources */,
+				27EE5EFA139CE7650029DFA0 /* ReaderTextViewController.m in Sources */,
+				27EE5EFF139CE7E20029DFA0 /* DefinitionsViewController.m in Sources */,
+				27A393C9139FA6DA00766E12 /* DefinitionsViewModel.m in Sources */,
+				27148D5913A3E17900E018DC /* ReaderSingleton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C8EF4E1397D55D00789460 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27C8EF581397D55D00789460 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27C8EF341397D55C00789460 /* DictReader */;
+			targetProxy = 27C8EF571397D55D00789460 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27EE5F1D139D16200029DFA0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27EE5F1E139D16200029DFA0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27EE5F1F139D16200029DFA0 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27EE5F20139D16200029DFA0 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27C8EF641397D55D00789460 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRELINK_LIBS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27C8EF651397D55D00789460 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRELINK_LIBS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		27C8EF671397D55D00789460 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestAppTwo/DictReader-Prefix.pch";
+				INFOPLIST_FILE = "TestAppTwo/DictReader-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = DictReader;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27C8EF681397D55D00789460 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestAppTwo/DictReader-Prefix.pch";
+				INFOPLIST_FILE = "TestAppTwo/DictReader-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = DictReader;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		27C8EF6A1397D55D00789460 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestAppTwo.app/TestAppTwo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestAppTwoTests/TestAppTwoTests-Prefix.pch";
+				INFOPLIST_FILE = "TestAppTwoTests/TestAppTwoTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = DictReaderTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		27C8EF6B1397D55D00789460 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestAppTwo.app/TestAppTwo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestAppTwoTests/TestAppTwoTests-Prefix.pch";
+				INFOPLIST_FILE = "TestAppTwoTests/TestAppTwoTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = DictReaderTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27C8EF2F1397D55C00789460 /* Build configuration list for PBXProject "DictReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C8EF641397D55D00789460 /* Debug */,
+				27C8EF651397D55D00789460 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27C8EF661397D55D00789460 /* Build configuration list for PBXNativeTarget "DictReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C8EF671397D55D00789460 /* Debug */,
+				27C8EF681397D55D00789460 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27C8EF691397D55D00789460 /* Build configuration list for PBXNativeTarget "DictReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C8EF6A1397D55D00789460 /* Debug */,
+				27C8EF6B1397D55D00789460 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27C8EF2C1397D55C00789460 /* Project object */;
+}
