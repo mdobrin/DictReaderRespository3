@@ -16,6 +16,7 @@
 
 
 - (id)init {
+    // XXX: No need to call super since you call overrided constuctor that calls super
     self = [super init];
     if (self) {
         [self initWithTerm:nil];
@@ -84,7 +85,7 @@
 //  Display header in table to show gutenberg rank
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
-
+    // XXX: Memory leak with headerLabel
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 30)] autorelease];
     CGRect labelFrame = CGRectMake(0, 0, headerView.frame.size.width, headerView.frame.size.height);
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:labelFrame];
@@ -108,6 +109,9 @@
 //  Determine height of cell based on the text it is displaying
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath: (NSIndexPath *) indexPath {
     
+    // XXX: This is confusing, are you trying to index into the dictionary? There is no gaurenteed ordering with a dictionary. 
+    // and it seems you are pulling all keys and values out into arrays just for the one key. There is definitely better ways to do this.
+    
     NSInteger count = [self.data.definitionsAndSampleSentences count];
     id keys[count];
     id objects[count];
@@ -127,11 +131,13 @@
 //  Display each cell's content
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
+    // XXX: Why are you not using reusing cells?!?!? This is a major performance hit!
     
     //  Temporary workaround due to unsolved update issue with currentCellTextView's text.
     UITableViewCell * cell = [[[UITableViewCell alloc] init] autorelease];
     
     /*static NSString *kCustomCellID = @"CustomCellID";
+    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCustomCellID];
     if (cell == nil)
@@ -170,6 +176,7 @@
 
 //  Allow dictionary use of dictionary terms.
 - (void)onLookupSelected:(NSString *) textSelection {
+    // XXX: Should be released here and not autoreleased
     
     //  If word is looked up, push a new view controller onto the nav controller to display definition.
     DefinitionsViewController * next = [[[DefinitionsViewController alloc] initWithTerm:textSelection] autorelease];

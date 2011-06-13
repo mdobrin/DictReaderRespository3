@@ -13,6 +13,7 @@
 @synthesize currentText;
 
 +(ReaderSingleton*) sharedAppInstance {
+    // XXX: static variables should be class level defined
     static ReaderSingleton *sharedAppInstance;
     
     @synchronized(self){
@@ -24,6 +25,7 @@
     return sharedAppInstance;
 }
 
+// XXX: Singleton patterns do not need dealloc
 -(void)dealloc { 
     [currentText release];
     [super dealloc];

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+// XXX: This is fine but sometimes it makes more sense to define this with the coorosponding class (ReaderTextView)
+
 //  Delegate which requires implementation of onLookupSelected to handle text lookup.
 @protocol ReaderTextViewDelegate <NSObject>
 

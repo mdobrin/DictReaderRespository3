@@ -15,6 +15,7 @@
 
 //  Initialize view controller.  By default, read only is set to NO
 - (id) init { 
+    // XXX: No need to call super since you call an overrided constuctor that calls super
     self = [super init];
     if (self) {
         [self initWithReadOnlyOn:NO];
@@ -37,6 +38,7 @@
 //  to allow text sharing between views on the tab bar.
 - (void)viewWillDisappear:(BOOL)animated {
     
+    // XXX: You do not need to pull out the instance. i.e. [ReaderSingleton sharedAppInstance].currentText = self.textViewer.text
     ReaderSingleton *sharedAppInstance;
     sharedAppInstance = [ReaderSingleton sharedAppInstance];
     sharedAppInstance.currentText = self.textViewer.text;
@@ -46,6 +48,7 @@
 //  Upon appearing, receive currently displayed text from the reader singleton
 - (void) viewWillAppear:(BOOL)animated {
     
+    // XXX: See above
     ReaderSingleton *sharedAppInstance;
     sharedAppInstance = [ReaderSingleton sharedAppInstance];
     self.textViewer.text = sharedAppInstance.currentText;
@@ -64,6 +67,9 @@
     UIMenuItem *testMenuItem = [[UIMenuItem alloc] initWithTitle:@"Lookup" action:@selector(lookup:)];
     [UIMenuController sharedMenuController].menuItems = [NSArray arrayWithObject:testMenuItem];
     [testMenuItem release];
+    
+    // XXX: Memory leak. Either autorelease the ReaderTextView, or set to a variable that you can release, or take the self. off textViewer
+    // XXX: Also, you should be overloading viewDidUnload and release this there as well
     
     //  Assign delegates for both UITextViewDelegate and ReaderTextViewDelegate
     self.textViewer = [[ReaderTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) ReadOnlyState:shouldViewBeReadOnly];
@@ -97,6 +103,7 @@
 //  If word is looked up, push a new view controller onto the nav controller to display definitions and sample sentences.
 - (void)onLookupSelected:(NSString *) textSelection {
 
+    // XXX: Should release the controller right away since there is no need to autorelease
     DefinitionsViewController * next = [[[DefinitionsViewController alloc] initWithTerm:textSelection] autorelease];
     [self.navigationController pushViewController:next animated:YES];
 }
@@ -110,6 +117,7 @@
     [doneButton release];
 }
 
+// XXX: This method is only called privately so it should be declared private
 //  Event handler for done button press
 - (void) doneButtonPressed {
 

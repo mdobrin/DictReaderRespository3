@@ -13,6 +13,7 @@
 @interface ReaderTextView : UITextView {
     
     id <ReaderTextViewDelegate> readerDelegate;
+    // XXX: variable names with is is not standard objective c naming
     BOOL isReadOnlyModeOn;
 }
 
@@ -20,6 +21,7 @@
 @property (nonatomic, assign) id <ReaderTextViewDelegate> readerDelegate;
 
 - (id)init:(BOOL)isReadOnly;
+// XXX: named parameters should not start with a capital letter
 - (id)initWithFrame:(CGRect)frame ReadOnlyState:(BOOL)isReadOnly;
 
 @end

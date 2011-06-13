@@ -13,6 +13,7 @@
 @synthesize isReadOnlyModeOn;
 
 - (id)init {
+    // XXX: No need to call super since you call an overrided constuctor that calls super
     self = [super init];
     if (self) {
         [self init:NO];
@@ -22,6 +23,7 @@
 
 //  Initializer with read-only flag
 - (id)init:(BOOL)isReadOnly {
+    // XXX: No need to call super since you call an overrided constuctor that calls super
     self = [super init];
     if (self) {
         [self initWithFrame:CGRectMake(0, 0, 320, 480) ReadOnlyState:isReadOnly];
@@ -42,6 +44,11 @@
     }
     return self;
 }
+
+// XXX: You should probably group these calls with pragma marks i.e.
+//----------------------------------------------------------------------------
+#pragma mark -
+#pragma mark UIResponder methods
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
@@ -101,6 +108,11 @@
         return NO;
     }
 }
+
+// XXX: You should probably group these calls with pragma marks like below and also declare this as a private method
+//----------------------------------------------------------------------------
+#pragma mark -
+#pragma mark Unknown? methods
 
 //  If lookup is called, get the currently selected text and pass responsibility on
 //  to the delegate to handle.

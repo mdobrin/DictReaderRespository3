@@ -17,6 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    // XXX: All autoreleased objects can be released instead
     
     //Tab Bar init
 	UITabBarController * temp = [[[UITabBarController alloc] init] autorelease];
@@ -125,6 +126,7 @@
 
 - (void)dealloc
 {
+    // XXX: Technically you should put [theTabBarController release] for constistency but it does not matter because the app delegate is like a singleton
     [_window release];
     [super dealloc];
 }
